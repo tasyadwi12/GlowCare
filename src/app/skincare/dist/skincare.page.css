@@ -3,8 +3,8 @@
 }
 
 .custom-segment {
-  margin: 16px auto; // auto kiri kanan = center
-  width: 97%; // biar gak full lebar (opsional)
+  margin: 16px auto;
+  width: 97%;
   --background: #e8ddd0;
   border-radius: 12px;
 }
@@ -14,7 +14,7 @@
   background: white;
   margin: 0 16px 16px;
   border-radius: 16px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
   border: 1px solid #e8ddd0;
 }
 
@@ -46,19 +46,17 @@
   --border-radius: 12px;
   margin-bottom: 10px;
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
   border: 1px solid #e8ddd0;
-
-  h3 {
-    font-weight: 600;
-    font-size: 15px;
-    color: #3a5a32;
-  }
-
-  p {
-    font-size: 12px;
-    color: #a0856a;
-  }
+}
+.routine-item h3 {
+  font-weight: 600;
+  font-size: 15px;
+  color: #3a5a32;
+}
+.routine-item p {
+  font-size: 12px;
+  color: #a0856a;
 }
 
 .empty-state {
