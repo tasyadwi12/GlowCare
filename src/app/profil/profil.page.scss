@@ -1,0 +1,86 @@
+.profil-content {
+  --background: #f9f6f0;
+}
+
+.profil-header {
+  background: linear-gradient(135deg, #3a5a32, #5a8a4a);
+  padding: 40px 20px;
+  text-align: center;
+  color: white;
+
+  .avatar-circle {
+    font-size: 64px;
+    margin-bottom: 12px;
+  }
+
+  h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  p {
+    margin: 4px 0 0;
+    opacity: 0.85;
+    font-size: 14px;
+  }
+}
+
+.stats-grid {
+  display: flex;
+  gap: 12px;
+  padding: 16px;
+
+  .stat-card {
+    flex: 1;
+    background: white;
+    border-radius: 12px;
+    padding: 16px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    border: 1px solid #e8ddd0;
+
+    h3 {
+      font-size: 28px;
+      font-weight: 700;
+      color: #3a5a32;
+      margin: 0;
+    }
+
+    p {
+      font-size: 12px;
+      color: #a0856a;
+      margin: 4px 0 0;
+    }
+  }
+}
+
+.profil-info {
+  padding: 0 16px;
+
+  .info-item {
+    --background: white;
+    --border-radius: 12px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    border: 1px solid #e8ddd0;
+
+    p {
+      font-size: 11px;
+      color: #a0856a;
+    }
+
+    h3 {
+      font-size: 15px;
+      font-weight: 600;
+      color: #3a5a32;
+    }
+  }
+}
+
+.logout-btn {
+  margin: 24px 16px;
+  --border-radius: 12px;
+  --background: #3a5a32;
+}

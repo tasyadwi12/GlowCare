@@ -1,0 +1,77 @@
+.home-content {
+  --background: #f9f6f0;
+}
+
+.welcome {
+  margin-top: 60px;
+  /* biar agak ke tengah */
+  margin-bottom: 30px;
+  text-align: center;
+  /* biar rapi tengah */
+}
+
+.welcome-title {
+  margin: 0;
+  color: #2e7d32;
+  /* hijau utama */
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-shadow: 0 1px 2px rgba(76, 175, 80, 0.25);
+  font-size: 22px;
+  /* biar lebih standout */
+}
+
+.tanggal {
+  margin: 5px 0 0 0;
+  color: #81c784;
+  /* hijau soft */
+  font-size: 13px;
+}
+
+.subtext {
+  margin-top: 20px;
+  font-size: 13px;
+  color: #999;
+}
+
+/* --- STYLE UNTUK PENJELASAN FITUR --- */
+.features-explanation {
+  padding: 0 10px;
+}
+.features-explanation .section-title {
+  font-weight: bold;
+  font-size: 16px;
+  color: #2e7d32;
+  margin-bottom: 15px;
+  text-align: left;
+}
+.features-explanation .feature-item {
+  background: #ffffff;
+  padding: 12px 15px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border-left: 4px solid #81c784;
+  /* Hijau soft sesuai tanggal */
+}
+.features-explanation .feature-item .feature-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 4px;
+}
+.features-explanation .feature-item .feature-header .feature-name {
+  font-weight: 600;
+  margin: 0;
+  font-size: 15px;
+  color: #333;
+}
+.features-explanation .feature-item .feature-header .icon {
+  margin-right: 10px;
+  font-size: 18px;
+}
+.features-explanation .feature-item .feature-desc {
+  margin: 0;
+  font-size: 12px;
+  color: #777;
+  line-height: 1.4;
+}

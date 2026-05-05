@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar style="--background: #3a5a32; --color: white;">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/home" style="color: white;"></ion-back-button>
+    </ion-buttons>
+    <ion-title style="color: white;">✨ Jadwal Skincare</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="skincare-content">
+
+  <ion-segment [(ngModel)]="segment" class="custom-segment">
+    <ion-segment-button value="pagi">
+      <ion-label>🌅 Pagi</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="malam">
+      <ion-label>🌙 Malam</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <div class="add-form">
+    <ion-item lines="none" class="input-item">
+      <ion-input placeholder="Nama produk skincare" [(ngModel)]="namaSkincare"></ion-input>
+    </ion-item>
+    <ion-item lines="none" class="input-item">
+      <ion-input placeholder="Waktu (contoh: 06.00 AM)" [(ngModel)]="waktuSkincare"></ion-input>
+    </ion-item>
+    <ion-button expand="block" class="add-btn" (click)="tambahSkincare()">
+      + Tambah Skincare
+    </ion-button>
+  </div>
+
+  <ion-list class="routine-list">
+    <ion-item *ngFor="let item of getList(); let i = index" lines="none" class="routine-item">
+      <ion-checkbox slot="start" [(ngModel)]="item.done" color="success"></ion-checkbox>
+      <ion-label>
+        <h3>{{ item.nama }}</h3>
+        <p>{{ item.waktu }}</p>
+      </ion-label>
+      <ion-badge slot="end" [color]="item.done ? 'success' : 'medium'">
+        {{ item.done ? 'Done' : 'Todo' }}
+      </ion-badge>
+      <ion-button slot="end" fill="clear" color="danger" (click)="hapusSkincare(i)">
+        <ion-icon name="trash-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+  </ion-list>
+
+  <div class="empty-state" *ngIf="getList().length === 0">
+    <p>✨ Belum ada skincare ditambahkan</p>
+  </div>
+
+</ion-content>

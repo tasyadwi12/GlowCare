@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar style="--background: #3a5a32; --color: white;">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/home" style="color: white;"></ion-back-button>
+    </ion-buttons>
+    <ion-title style="color: white;">💡 Tips & Motivasi</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="tips-content">
+
+  <div class="hero-card">
+    <h2>✨ Tips Hari Ini</h2>
+    <p>Semangat merawat diri kamu!</p>
+  </div>
+  
+  <div class="tips-section">
+    <h3 class="section-title">🌿 Tips Skincare Harian</h3>
+    <div class="tip-card" *ngFor="let tip of skincareTips">
+      <div class="tip-icon">{{ tip.icon }}</div>
+      <div class="tip-content">
+        <h4>{{ tip.judul }}</h4>
+        <p>{{ tip.deskripsi }}</p>
+      </div>
+    </div>
+  </div>
+
+</ion-content>

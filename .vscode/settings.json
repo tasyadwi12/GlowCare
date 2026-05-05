@@ -1,0 +1,7 @@
+{
+  "typescript.preferences.autoImportFileExcludePatterns": [
+    "@ionic/angular/common",
+    "@ionic/angular/standalone"
+  ],
+  "compile-hero.disable-compile-files-on-did-save-code": false
+}

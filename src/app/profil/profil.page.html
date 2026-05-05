@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar style="--background: #3a5a32; --color: white;">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/home" style="color: white;"></ion-back-button>
+    </ion-buttons>
+    <ion-title style="color: white;">👤 Profil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="profil-content">
+
+  <div class="profil-header">
+    <div class="avatar-circle">🌿</div>
+    <h2>{{ userName }}</h2>
+  </div>
+
+  <div class="stats-grid">
+    <div class="stat-card">
+      <h3>{{ totalSkincare }}</h3>
+      <p>Skincare</p>
+    </div>
+    <div class="stat-card">
+      <h3>{{ totalObat }}</h3>
+      <p>Obat</p>
+    </div>
+    <div class="stat-card">
+      <h3>{{ totalChecklist }}</h3>
+      <p>Kebiasaan</p>
+    </div>
+  </div>
+
+  <div class="profil-info">
+    <ion-item lines="none" class="info-item">
+      <ion-icon name="person-outline" slot="start" style="color: #3a5a32;"></ion-icon>
+      <ion-label>
+        <p>Nama</p>
+        <h3>{{ userName }}</h3>
+      </ion-label>
+    </ion-item>
+  </div>
+
+  <ion-button expand="block" class="logout-btn" (click)="logout()">
+    <ion-icon name="log-out-outline" slot="start"></ion-icon>
+    Logout
+  </ion-button>
+
+</ion-content>

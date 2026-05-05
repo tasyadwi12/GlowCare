@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar style="--background: #3a5a32; --color: white;">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/home" style="color: white;"></ion-back-button>
+    </ion-buttons>
+    <ion-title style="color: white;">✅ Checklist Harian</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="checklist-content">
+
+  <div class="add-form">
+    <ion-item lines="none" class="input-item">
+      <ion-input placeholder="Tambah kebiasaan baru..." [(ngModel)]="namaKebiasaan"></ion-input>
+    </ion-item>
+    <ion-button expand="block" class="add-btn" (click)="tambah()">
+      + Tambah Kebiasaan
+    </ion-button>
+  </div>
+
+  <div class="progress-card">
+    <p>Progress Hari Ini</p>
+    <h2>{{ getDone() }} / {{ daftarKebiasaan.length }}</h2>
+    <ion-progress-bar [value]="getProgress()" color="success"></ion-progress-bar>
+  </div>
+
+  <ion-list class="checklist-list">
+    <ion-item *ngFor="let item of daftarKebiasaan; let i = index" lines="none" class="checklist-item">
+      <ion-checkbox slot="start" [(ngModel)]="item.done" color="success"></ion-checkbox>
+      <ion-label [class.done-text]="item.done">
+        {{ item.nama }}
+      </ion-label>
+      <ion-button slot="end" fill="clear" color="danger" (click)="hapus(i)">
+        <ion-icon name="trash-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+  </ion-list>
+
+  <div class="empty-state" *ngIf="daftarKebiasaan.length === 0">
+    <p>✅ Tambah kebiasaan sehatmu!</p>
+  </div>
+
+</ion-content>

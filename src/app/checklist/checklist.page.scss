@@ -1,0 +1,73 @@
+.checklist-content {
+  --background: #f9f6f0;
+}
+
+.add-form {
+  padding: 16px;
+  background: white;
+  margin: 16px;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  border: 1px solid #e8ddd0;
+}
+
+.input-item {
+  --background: #f9f6f0;
+  --border-radius: 10px;
+  border-radius: 10px;
+  margin-bottom: 8px;
+  border: 1px solid #e8ddd0;
+}
+
+.add-btn {
+  --background: #3a5a32;
+  --border-radius: 10px;
+  margin-top: 8px;
+}
+
+.progress-card {
+  background: linear-gradient(135deg, #3a5a32, #5a8a4a);
+  margin: 0 16px 16px;
+  padding: 16px;
+  border-radius: 16px;
+  color: white;
+  text-align: center;
+
+  p {
+    margin: 0;
+    font-size: 13px;
+    opacity: 0.85;
+  }
+
+  h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 4px 0 12px;
+  }
+}
+
+.checklist-list {
+  background: transparent;
+  padding: 0 16px;
+}
+
+.checklist-item {
+  --background: white;
+  --border-radius: 12px;
+  margin-bottom: 10px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  border: 1px solid #e8ddd0;
+}
+
+.done-text {
+  text-decoration: line-through;
+  color: #a0856a;
+}
+
+.empty-state {
+  text-align: center;
+  margin-top: 40px;
+  color: #a0856a;
+  font-size: 16px;
+}

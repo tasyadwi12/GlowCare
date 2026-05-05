@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar style="--background: #3a5a32; --color: white;">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/home" style="color: white;"></ion-back-button>
+    </ion-buttons>
+    <ion-title style="color: white;">💊 Jadwal Obat</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="obat-content">
+
+  <div class="add-form">
+    <ion-item lines="none" class="input-item">
+      <ion-input placeholder="Nama obat" [(ngModel)]="namaObat" class="input-text"></ion-input>
+    </ion-item>
+    <ion-item lines="none" class="input-item">
+      <ion-input placeholder="Dosis (contoh: 500mg)" [(ngModel)]="dosisObat" class="input-text"></ion-input>
+    </ion-item>
+    <ion-item lines="none" class="input-item">
+      <ion-input placeholder="Waktu (contoh: 07.00 AM)" [(ngModel)]="waktuObat" class="input-text"></ion-input>
+    </ion-item>
+    <ion-button expand="block" class="add-btn" (click)="tambahObat()">
+      + Tambah Obat
+    </ion-button>
+  </div>
+
+  <ion-list class="obat-list">
+    <ion-item *ngFor="let item of daftarObat; let i = index" lines="none" class="obat-item">
+      <ion-checkbox slot="start" [(ngModel)]="item.done" color="success"></ion-checkbox>
+      <ion-label>
+        <h3>{{ item.nama }}</h3>
+        <p>{{ item.dosis }} · {{ item.waktu }}</p>
+      </ion-label>
+      <ion-badge slot="end" [color]="item.done ? 'success' : 'danger'">
+        {{ item.done ? 'Sudah' : 'Belum' }}
+      </ion-badge>
+      <ion-button slot="end" fill="clear" color="danger" (click)="hapusObat(i)">
+        <ion-icon name="trash-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+  </ion-list>
+
+  <div class="empty-state" *ngIf="daftarObat.length === 0">
+    <p>💊 Belum ada obat ditambahkan</p>
+  </div>
+
+</ion-content>

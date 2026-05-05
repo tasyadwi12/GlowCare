@@ -1,0 +1,157 @@
+.login-content {
+  --background: #ffffff;
+}
+
+.login-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 32px 24px;
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 36px;
+
+  .logo-circle {
+    width: 90px;
+    height: 90px;
+    background: #f5f0e8;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+    box-shadow: 0 8px 24px rgba(74, 103, 65, 0.2);
+
+    .logo-emoji {
+      font-size: 42px;
+    }
+  }
+
+  h1 {
+    font-size: 32px;
+    font-weight: 800;
+    color: #3a5a32;
+    margin: 0 0 8px;
+  }
+
+  .tagline {
+    color: #a0856a;
+    font-size: 14px;
+    margin: 0;
+    letter-spacing: 0.5px;
+  }
+}
+
+.login-form {
+  width: 100%;
+  max-width: 380px;
+}
+
+.form-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #5a4a3a;
+  margin: 0 4px 6px;
+}
+
+.input-item {
+  --background: #f9f6f0;
+  --border-radius: 14px;
+  margin-bottom: 16px;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  border: 1.5px solid #e8ddd0;
+
+  .input-icon {
+    color: #4a6741;
+    font-size: 18px;
+  }
+}
+
+.input-text {
+  font-size: 15px;
+  color: #000;
+}
+
+.login-btn {
+  --background: #3a5a32;
+  --border-radius: 14px;
+  --box-shadow: 0 8px 20px rgba(58, 90, 50, 0.35);
+  margin-top: 8px;
+  height: 52px;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+}
+
+.register-btn {
+  --border-radius: 14px;
+  --color: #3a5a32;
+  --border-color: #3a5a32;
+  height: 52px;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.divider {
+  text-align: center;
+  margin: 16px 0;
+  position: relative;
+  color: #bbb;
+  font-size: 13px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: #e8ddd0;
+  }
+
+  span {
+    background: #ffffff;
+    padding: 0 12px;
+    position: relative;
+  }
+}
+
+.error-text {
+  color: #c0392b;
+  font-size: 12px;
+  margin: -8px 0 12px 4px;
+}
+
+.password-rules {
+  margin: -8px 0 12px 4px;
+
+  p {
+    font-size: 12px;
+    margin: 4px 0;
+  }
+
+  .valid {
+    color: #4a6741;
+  }
+
+  .invalid {
+    color: #c0392b;
+  }
+}
+
+.footer-text {
+  text-align: center;
+  margin-top: 20px;
+  color: #bbb;
+  font-size: 11px;
+
+  .link {
+    color: #3a5a32;
+    font-weight: 600;
+  }
+}
