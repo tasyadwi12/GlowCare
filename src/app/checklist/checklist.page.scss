@@ -1,3 +1,7 @@
+.checklist-item ion-label {
+  color: black; // default warna teks
+}
+
 .checklist-content {
   --background: #f9f6f0;
 }
@@ -19,8 +23,13 @@
   border: 1px solid #e8ddd0;
 }
 
+.input-text {
+  color: #000;
+}
+
 .add-btn {
   --background: #3a5a32;
+  color: white;
   --border-radius: 10px;
   margin-top: 8px;
 }

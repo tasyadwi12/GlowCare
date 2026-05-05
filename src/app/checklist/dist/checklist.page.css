@@ -1,4 +1,8 @@
-.obat-content {
+.checklist-item ion-label {
+  color: black;
+}
+
+.checklist-content {
   --background: #f9f6f0;
 }
 
@@ -7,7 +11,7 @@
   background: white;
   margin: 16px;
   border-radius: 16px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
   border: 1px solid #e8ddd0;
 }
 
@@ -30,29 +34,42 @@
   margin-top: 8px;
 }
 
-.obat-list {
+.progress-card {
+  background: linear-gradient(135deg, #3a5a32, #5a8a4a);
+  margin: 0 16px 16px;
+  padding: 16px;
+  border-radius: 16px;
+  color: white;
+  text-align: center;
+}
+.progress-card p {
+  margin: 0;
+  font-size: 13px;
+  opacity: 0.85;
+}
+.progress-card h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 4px 0 12px;
+}
+
+.checklist-list {
   background: transparent;
   padding: 0 16px;
 }
 
-.obat-item {
+.checklist-item {
   --background: white;
   --border-radius: 12px;
   margin-bottom: 10px;
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
   border: 1px solid #e8ddd0;
+}
 
-  h3 {
-    font-weight: 600;
-    font-size: 15px;
-    color: #3a5a32;
-  }
-
-  p {
-    font-size: 12px;
-    color: #a0856a;
-  }
+.done-text {
+  text-decoration: line-through;
+  color: #a0856a;
 }
 
 .empty-state {
